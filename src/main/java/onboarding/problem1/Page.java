@@ -7,6 +7,10 @@ public class Page {
         this.number = number;
     }
 
+    public int calculate() {
+        return Math.max(plus(number), multiply(number));
+    }
+
     private int plus(int n) {
         int result = 0;
         while (n > 0) {
