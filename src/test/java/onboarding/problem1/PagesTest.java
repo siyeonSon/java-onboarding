@@ -30,4 +30,12 @@ class PagesTest {
                 new Pages(numbers));
         assertEquals(e.getMessage(), "시작 면이 나올 수 없습니다");
     }
+
+    @Test
+    void 마지막_면이_나올_수_없다() {
+        List<Integer> numbers = List.of(399, 400);
+        Exception e = assertThrows(IllegalArgumentException.class, () ->
+                new Pages(numbers));
+        assertEquals(e.getMessage(), "마지막 면이 나올 수 없습니다");
+    }
 }

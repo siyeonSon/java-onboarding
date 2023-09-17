@@ -28,6 +28,9 @@ public class Pages {
 
         isStart(left);
         isStart(right);
+
+        isEnd(left);
+        isEnd(right);
     }
 
     private void isInRange(int left, int right) {
@@ -39,6 +42,12 @@ public class Pages {
     private void isStart(int number) {
         if (number <= 1) {
             throw new IllegalArgumentException("시작 면이 나올 수 없습니다");
+        }
+    }
+
+    private void isEnd(int number) {
+        if (number >= 400) {
+            throw new IllegalArgumentException("마지막 면이 나올 수 없습니다");
         }
     }
 }
