@@ -25,11 +25,20 @@ public class Pages {
 
     private void isValidate(int left, int right) {
         isInRange(left, right);
+
+        isStart(left);
+        isStart(right);
     }
 
     private void isInRange(int left, int right) {
         if (left < 1 || right > 400) {
             throw new IllegalArgumentException("페이지 범위를 벗어났습니다");
+        }
+    }
+
+    private void isStart(int number) {
+        if (number <= 1) {
+            throw new IllegalArgumentException("시작 면이 나올 수 없습니다");
         }
     }
 }

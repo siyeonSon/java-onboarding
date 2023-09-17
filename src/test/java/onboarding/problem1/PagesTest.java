@@ -22,4 +22,12 @@ class PagesTest {
                 new Pages(numbers));
         assertEquals(e.getMessage(), "페이지 범위를 벗어났습니다");
     }
+
+    @Test
+    void 시작_면이_나올_수_없다() {
+        List<Integer> numbers = List.of(1, 2);
+        Exception e = assertThrows(IllegalArgumentException.class, () ->
+                new Pages(numbers));
+        assertEquals(e.getMessage(), "시작 면이 나올 수 없습니다");
+    }
 }
