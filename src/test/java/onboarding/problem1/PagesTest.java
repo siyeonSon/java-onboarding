@@ -46,4 +46,12 @@ class PagesTest {
                 new Pages(numbers));
         assertEquals(e.getMessage(), "왼쪽 페이지는 홀수 번호이어야 합니다");
     }
+
+    @Test
+    void 오른쪽_페이지는_짝수_번호이어야_한다() {
+        List<Integer> numbers = List.of(21, 21);
+        Exception e = assertThrows(IllegalArgumentException.class, () ->
+                new Pages(numbers));
+        assertEquals(e.getMessage(), "오른쪽 페이지는 짝수 번호이어야 합니다");
+    }
 }

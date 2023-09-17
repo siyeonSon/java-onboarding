@@ -33,6 +33,7 @@ public class Pages {
         isEnd(right);
 
         isOdd(left);
+        isEven(right);
     }
 
     private void isInRange(int left, int right) {
@@ -56,6 +57,12 @@ public class Pages {
     private void isOdd(int left) {
         if (left % 2 == 0) {
             throw new IllegalArgumentException("왼쪽 페이지는 홀수 번호이어야 합니다");
+        }
+    }
+
+    private void isEven(int right) {
+        if (right % 2 != 0) {
+            throw new IllegalArgumentException("오른쪽 페이지는 짝수 번호이어야 합니다");
         }
     }
 }
