@@ -54,4 +54,12 @@ class PagesTest {
                 new Pages(numbers));
         assertEquals(e.getMessage(), "오른쪽 페이지는 짝수 번호이어야 합니다");
     }
+
+    @Test
+    void 두_페이지는_연속적이어야_한다() {
+        List<Integer> numbers = List.of(21, 24);
+        Exception e = assertThrows(IllegalArgumentException.class, () ->
+                new Pages(numbers));
+        assertEquals(e.getMessage(), "두 페이지가 연속적이지 않습니다");
+    }
 }

@@ -34,6 +34,8 @@ public class Pages {
 
         isOdd(left);
         isEven(right);
+
+        isContinuous(left, right);
     }
 
     private void isInRange(int left, int right) {
@@ -63,6 +65,12 @@ public class Pages {
     private void isEven(int right) {
         if (right % 2 != 0) {
             throw new IllegalArgumentException("오른쪽 페이지는 짝수 번호이어야 합니다");
+        }
+    }
+
+    private void isContinuous(int left, int right) {
+        if (right - left != 1) {
+            throw new IllegalArgumentException("두 페이지가 연속적이지 않습니다");
         }
     }
 }
