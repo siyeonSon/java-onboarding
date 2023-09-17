@@ -31,6 +31,8 @@ public class Pages {
 
         isEnd(left);
         isEnd(right);
+
+        isOdd(left);
     }
 
     private void isInRange(int left, int right) {
@@ -48,6 +50,12 @@ public class Pages {
     private void isEnd(int number) {
         if (number >= 400) {
             throw new IllegalArgumentException("마지막 면이 나올 수 없습니다");
+        }
+    }
+
+    private void isOdd(int left) {
+        if (left % 2 == 0) {
+            throw new IllegalArgumentException("왼쪽 페이지는 홀수 번호이어야 합니다");
         }
     }
 }

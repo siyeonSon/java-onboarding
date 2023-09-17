@@ -38,4 +38,12 @@ class PagesTest {
                 new Pages(numbers));
         assertEquals(e.getMessage(), "마지막 면이 나올 수 없습니다");
     }
+
+    @Test
+    void 왼쪽_페이지는_홀수_번호이어야_한다() {
+        List<Integer> numbers = List.of(20, 20);
+        Exception e = assertThrows(IllegalArgumentException.class, () ->
+                new Pages(numbers));
+        assertEquals(e.getMessage(), "왼쪽 페이지는 홀수 번호이어야 합니다");
+    }
 }
