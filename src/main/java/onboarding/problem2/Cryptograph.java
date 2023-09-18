@@ -7,6 +7,17 @@ public class Cryptograph {
         this.cryptogram = cryptogram;
     }
 
+    public String decode() {
+        while (true) {
+            String deletedCryptogram = deleteDuplication(cryptogram);
+            if (cryptogram.equals(deletedCryptogram)) {
+                break;
+            }
+            cryptogram = deletedCryptogram;
+        }
+        return cryptogram;
+    }
+
     private String deleteDuplication(String cryptogram) {
         int i;
         int j = 0;
