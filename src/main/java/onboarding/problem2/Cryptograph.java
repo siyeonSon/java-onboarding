@@ -1,7 +1,7 @@
 package onboarding.problem2;
 
 public class Cryptograph {
-    private String cryptogram;
+    private final String cryptogram;
 
     public Cryptograph(String cryptogram) {
         this.cryptogram = cryptogram;
