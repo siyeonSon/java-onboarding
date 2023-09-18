@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pages {
-    private List<Page> pages;
+    private final List<Page> pages;
 
     public Pages(List<Integer> numbers) {
         this.pages = new ArrayList<>();

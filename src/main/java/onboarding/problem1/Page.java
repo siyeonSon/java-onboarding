@@ -1,7 +1,7 @@
 package onboarding.problem1;
 
 public class Page {
-    private int number;
+    private final int number;
 
     public Page(int number) {
         this.number = number;
