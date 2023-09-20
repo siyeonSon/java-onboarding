@@ -1,13 +1,10 @@
 package onboarding.problem3;
 
 public class Game {
-    private final int number;
-
-    public Game(int number) {
-        this.number = number;
+    private Game() {
     }
 
-    public int solve() {
+    public static int solve(int number) {
         int result = 0;
         for(int i = 3; i < number + 1; i++) {
             result += count(i);
@@ -15,7 +12,7 @@ public class Game {
         return result;
     }
 
-    private int count(int number) {
+    private static int count(int number) {
         int result = 0;
         while (number > 0) {
             if (number % 10 != 0 && number % 10 % 3 == 0) {
