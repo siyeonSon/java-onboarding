@@ -1,13 +1,10 @@
 package onboarding.problem4;
 
 public class Frog {
-    private String word;
-
-    public Frog(String word) {
-        this.word = word;
+    private Frog() {
     }
 
-    public String say() {
+    public static String say(String word) {
         StringBuilder result = new StringBuilder();
         for (char w : word.toCharArray()) {
             result.append(reverse(w));
@@ -15,7 +12,7 @@ public class Frog {
         return result.toString();
     }
 
-    private char reverse(char word) {
+    private static char reverse(char word) {
         if (Character.isUpperCase(word)) {
             return (char) ('Z' - (word - 'A'));
         } else if (Character.isLowerCase(word)) {
